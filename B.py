@@ -75,9 +75,11 @@ if __name__=="__main__":
 			connect(device)
 		except Exception as e:
 			signal=e[0]
-			if (signal==71)or(signal==103)or(signal==111):
+			if not signal is 112:
+				print(signal)
 				print("detected bluetooth")
 				GPIO.output(led_pin,GPIO.LOW)
-			else:
+			else:	
+				print(signal)
 				print("error:not detect")
 				GPIO.output(led_pin,GPIO.HIGH)

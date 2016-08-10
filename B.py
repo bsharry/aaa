@@ -6,6 +6,7 @@ import bluetooth
 import sys
 import json
 import RPi.GPIO as GPIO
+import os.path
 led_pin=25
 version=None
 def find_Devices():
@@ -15,6 +16,8 @@ def find_Devices():
 
 def check_Devices():
 	"""check whether this program has been correctly runned"""
+	if not os.path.isfile("device.json"):
+		return False
 	file=open("device.json")
 	data=json.load(file)
 	if 'address' in data:

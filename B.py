@@ -35,7 +35,7 @@ def python_Version_Check():
 
 def address_Save(address):
 	"""save the bluetooth address"""
-	file=open("device.json")
+	file=open("device.json","w")
 	data=dict()
 	data['address']=address
 	json.dump(data,file)

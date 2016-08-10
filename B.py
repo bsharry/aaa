@@ -5,7 +5,7 @@
 import bluetooth
 import sys
 import json
-import RPI.GPIO as GPIO
+import RPi.GPIO as GPIO
 led_pin=25
 version=None
 def find_Devices():

@@ -7,7 +7,7 @@ import sys
 import json
 import RPi.GPIO as GPIO
 import os.path
-led_pin=25
+led_pin=26
 version=None
 def find_Devices():
 	"""find the bluetooth device"""

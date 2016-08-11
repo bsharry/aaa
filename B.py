@@ -79,9 +79,9 @@ if __name__=="__main__":
 			if not signal is 112:
 				print(signal)
 				print("detected bluetooth")
-				GPIO.output(led_pin,True)
+				GPIO.output(led_pin,False)
 			else:	
 				print(signal)
 				print("error:not detect")
-				GPIO.output(led_pin,False)
+				GPIO.output(led_pin,True)
 	GPIO.cleanup()

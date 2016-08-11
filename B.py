@@ -74,7 +74,8 @@ if __name__=="__main__":
 		try:
 			connect(device)
 		except Exception as e:
-			signal=e[0]
+			signal=eval(e[0])
+			signal=signal[0]
 			if not signal is 112:
 				print(signal)
 				print("detected bluetooth")

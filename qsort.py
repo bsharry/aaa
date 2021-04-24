@@ -13,11 +13,9 @@ def qsort(L):
         low += 1
     L[high] =L[low]
   L[low] = p
-  if len(L) <= 2:
-    return
-  else:
-    qsort(L[:low+1])
-    qsort(L[low+1:])
+
+  qsort(L[:low+1])
+  qsort(L[low+1:])
 
 b= [1,2,3,4,5,6,7,8,10]
 
